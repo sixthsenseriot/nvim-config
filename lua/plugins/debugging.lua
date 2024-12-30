@@ -12,7 +12,7 @@ return {
 
     require("dapui").setup()
     require("dap-go").setup()
-    require("dap-python").setup("python3")
+    require("dap-python").setup()
 
     dap.listeners.before.attach.dapui_config = function()
       dapui.open()
@@ -29,7 +29,7 @@ return {
 
     dap.adapters.lldb = {
       type = "executable",
-      command = "/usr/bin/lldb-vscode",
+      command = "/usr/bin/lldb",
       name = "lldb",
     }
 
